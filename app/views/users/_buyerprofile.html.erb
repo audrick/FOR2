@@ -1,0 +1,36 @@
+<%= form_for(@user) do |f| %>
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved: </h2>
+
+      <ul>
+        <% @user.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+    <% Cuisine.order('cuisine_name').each do |cuisine| %>
+      <%= cuisine.cuisine_name %>
+      <%= check_box_tag 'user[cuisine_ids][]', cuisine.id, @user.cuisines.to_a.include?(cuisine) %>
+    <% end %>
+
+  <div class="field">
+    <%= f.label "What is your freshness preference?" %>
+    <%= f.check_box :buyer_fresh_preference, :checked => true %><%= f.label "Same Day" %>
+    <%= f.check_box :buyer_fresh_preference, :checked => false %><%= f.label "1-Day" %>
+  </div>
+  <div class="field">
+    <%= f.label :buyer_distance_preference %>
+    <%= f.text_field :buyer_distance_preference %>
+  </div>
+  <div class="field">
+    <%= f.label "Do you have any allergies?" %>
+    <%= f.radio_button :has_allergies, true %><%= f.label :has_allergies, "Yes" %>
+    <%= f.radio_button :has_allergies, false %><%= f.label :has_allergies, "No" %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

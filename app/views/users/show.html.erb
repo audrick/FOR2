@@ -1,0 +1,32 @@
+<%= link_to "logout", '/logout' %>
+
+<% if @auth %>
+  <div><h2>Welcome <%= @auth.first_name %></h2></div>
+  <br>
+<% end %>
+
+<h1>Your username is: <%= @user.username %></h1>
+
+
+<%= link_to "Edit", edit_user_path %><br/><br/>
+<%= link_to "Create New User", new_user_path %><br/>
+<br/>
+<%= link_to "Back to Index", users_path %><br/><br/>
+
+
+<%if @user.is_seller %>
+    <%= link_to "Post a Meal", new_meal_path %>
+<% end %>
+
+
+<!-- <%#= meal_show_tag(@user) %>         #helper not working properly -->
+
+<% if @user.is_seller && @user.meals %>
+  <h3>Your Posted Meals:</h3>
+  <% @user.meals.each do |meal| %>
+  <%= meal.meal_name %><br/>
+<% end %>
+
+<p>Find me in app/views/users/show.html.erb</p>
+
+<% end %>

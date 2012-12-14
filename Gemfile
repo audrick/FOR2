@@ -21,7 +21,7 @@ gem 'sass'
 # gem 'twilio-ruby'
 # gem 'twitter'
 gem 'twitter-bootstrap-rails'
-# gem 'zurb-foundation'
+gem 'zurb-foundation'
 
 
 group :development, :test do

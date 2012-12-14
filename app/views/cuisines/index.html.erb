@@ -1,0 +1,21 @@
+<p>Find me in app/views/cuisines/index.html.erb</p>
+
+<h1>The current list of cuisines are:</h1>
+
+<h1><% @cuisines.each do |cuisine| %></h1>
+
+<p><%= cuisine.cuisine_name %></p>
+
+
+
+
+
+<td><%= link_to 'Show', cuisine_path(cuisine) %></td>
+<td><%= link_to 'Edit', edit_cuisine_path(cuisine) %></td>
+<td><%= link_to 'Destroy', cuisine, method: :delete, data: {confirm: 'Are you sure?'}%></td>
+<% end %>
+
+<br/>
+<br/>
+<br/>
+<%= link_to 'Add New Cuisine', new_cuisine_path %>

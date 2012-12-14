@@ -1,0 +1,18 @@
+<%= link_to "logout", '/logout' %>
+
+<h1>Edit Profile</h1>
+
+<%= render 'formedit' %>
+
+
+<h3>Please complete your buyer profile and select the type of meals you prefer:</h3>
+<div id="buyer_profile"><%= render 'buyerprofile' %></div>
+<br/>
+
+<h3>Do you want to be a seller?</h3><button id="show">Yes</button>
+<div id="seller_profile"><%= render 'sellerprofile' %></div>
+
+
+<p>Find me in app/views/users/edit.html.erb</p>
+
+
