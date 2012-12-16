@@ -11,9 +11,10 @@
     </div>
   <% end %>
 
+
     <% Cuisine.order('cuisine_name').each do |cuisine| %>
       <%= cuisine.cuisine_name %>
-      <%= check_box_tag 'user[cuisine_ids][]', cuisine.id, @user.cuisines.to_a.include?(cuisine) %>
+      <%= check_box_tag 'user[cuisine_ids][]  ', cuisine.id, @user.cuisines.to_a.include?(cuisine) %>
     <% end %>
 
   <div class="field">

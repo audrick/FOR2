@@ -51,9 +51,5 @@ class UsersController < ApplicationController
     redirect_to user
   end
 
-
-  def buyer_pref
-    @user = User.find(params[:id])
-  end
 end
 
