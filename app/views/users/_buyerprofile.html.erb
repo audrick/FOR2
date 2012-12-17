@@ -13,7 +13,7 @@
 
 
     <% Cuisine.order('cuisine_name').each do |cuisine| %>
-      <%= check_box_tag 'user[cuisine_ids][]  ', cuisine.id, @user.cuisines.to_a.include?(cuisine) %>
+      <%= check_box_tag 'user[cuisine_ids][]', cuisine.id, @user.cuisines.to_a.include?(cuisine) %>
       <%= cuisine.cuisine_name %>
     <% end %>
 

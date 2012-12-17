@@ -1,15 +1,16 @@
+<%= link_to "logout", '/logout' %>
+
 <h1>Meals#show</h1>
+
 <h1>This is the show page of a particular posted meal</h1>
 
 
 <p>Find me in app/views/meals/show.html.erb</p>
 
 
-<%= @meal.meal_name %>
 
+<% if @user.is_seller && @user.meals %>
+  <%= @meal.meal_name %>
+  <%= link_to 'Edit Meal', edit_meal_path %>
 
-
-
-
-
-
+<% end %>

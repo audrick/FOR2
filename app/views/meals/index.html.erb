@@ -3,15 +3,13 @@
 <h1>The current list of meals are:</h1>
 
 
-
-<h1><% @meals.each do |meal| %></h1>
-
-<p><%= meal.meal_name %></p>
-<td><%= link_to 'Show', meal %></td>
-<td><%= link_to 'Edit', edit_meal_path(meal) %></td>
-<td><%= link_to 'Destroy', meal, method: :delete, data: {confirm: 'Are you sure?'}%></td>
+<% @meals.each do |meal| %>
+  <%= meal.meal_name %>
+  <%= link_to 'Edit', edit_meal_path(meal) %>
+  <%= link_to 'Destroy', meal, method: :delete, data: {confirm: 'Are you sure?'}%><br/>
 <% end %>
 
 <br/>
 <br/>
 <%= link_to 'Add Dish', new_meal_path %>
+

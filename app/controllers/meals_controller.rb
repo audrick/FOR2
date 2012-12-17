@@ -26,9 +26,11 @@ class MealsController < ApplicationController
   end
 
   def list
-    @user.cuisines.map(&:meals).flatten.uniq
-    end
+  end
+
+  def destroy
+    meal = Meal.find(params[:id])
+    meal.delete
+    redirect_to meal
   end
 end
-
-

@@ -1,14 +1,26 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>FOR2</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+  <meta charset="utf-8">
+  <meta name="FOR" content="Give your leftovers a second chance">
+  <meta name="keywords" content="homemade, leftovers,">
+  <link href='http://fonts.googleapis.com/css?family=Average' rel='stylesheet' type='text/css'>
 
-<%= yield %>
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 
-</body>
+    <%= stylesheet_link_tag    "application", :media => "all" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+
+  </head>
+  <body>
+  <title>FOR</title>
+
+  <%= yield %>
+
+  </body>
 </html>
+
+
+
+

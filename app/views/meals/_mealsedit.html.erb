@@ -1,0 +1,40 @@
+<%= form_for (@meal) do |f| %>
+  <% if @meal.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@meal.errors.count, "error") %> prohibited this meal from being saved: </h2>
+      <ul>
+        <% @meals.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+  </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label "What is the meal name?" %>
+    <%= f.text_field :meal_name %>
+  </div>
+  <div class="field">
+    <%= f.label "Name your price" %>
+    <%= f.text_field :meal_price %>
+  </div>
+  <div class="field">
+    <%= f.label "Description" %>
+    <%= f.text_field :meal_description %>
+  </div>
+  <div class="field">
+    <%= f.label "Does the meal contain any allergies?" %>
+    <%= f.radio_button :may_contain_allergies, true %><%= f.label :has_allergies, "Yes" %>
+    <%= f.radio_button :may_contain_allergies, false %><%= f.label :has_allergies, "No" %>
+  </div>
+  <div class="field">
+    <%= f.label "Check all cuisine types that apply to this meal:" %>
+      <% Cuisine.order('cuisine_name').each do |cuisine| %>
+      <%= check_box_tag 'meal[cuisine_ids][]', cuisine.id %>
+      <%= cuisine.cuisine_name %>
+    <% end %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

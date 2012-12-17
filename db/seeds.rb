@@ -29,41 +29,41 @@ u20 = User.create(:first_name => "Emeril", :last_name => "Lagasse", :username =>
 
 # meals
 
-m1 = Meal.create(:meal_name => "Gazpacho", :meal_price => "2.00", :meal_photo => "", :meal_description => "", :may_contain_allergies => "f")
-m2 = Meal.create(:meal_name => "Pot Roast with Garlic Mash", :meal_price => "4.00", :meal_photo => "", :meal_description => "", :may_contain_allergies => "f")
-m3 = Meal.create(:meal_name => "Pork Chops with Mint Jelly", :meal_price => "5.00", :meal_photo => "", :meal_description => "", :may_contain_allergies => "f")
-m4 = Meal.create(:meal_name => "Shepherd's Pie", :meal_price => "4.00", :meal_photo => "", :meal_description => "", :may_contain_allergies => "f")
-m5 = Meal.create(:meal_name => "Apple Pie for 2", :meal_price => "3.00", :meal_photo => "", :meal_description => "", :may_contain_allergies => "f")
-m6 = Meal.create(:meal_name => "Brocoli Slaw ", :meal_price => "2.00", :meal_photo => "", :meal_description => "", :may_contain_allergies => "f")
-m7 = Meal.create(:meal_name => "Pull Pork Sandwich", :meal_price => "4.00", :meal_photo => "", :meal_description => "", :may_contain_allergies => "f")
+m1 = Meal.create(:meal_name => "Gazpacho", :meal_price => "2", :meal_photo => "", :meal_description => "", :may_contain_allergies => "f")
+m2 = Meal.create(:meal_name => "Pot Roast with Garlic Mash", :meal_price => "4", :meal_photo => "", :meal_description => "", :may_contain_allergies => "f")
+m3 = Meal.create(:meal_name => "Pork Chops with Mint Jelly", :meal_price => "5", :meal_photo => "", :meal_description => "", :may_contain_allergies => "f")
+m4 = Meal.create(:meal_name => "Shepherd's Pie", :meal_price => "4", :meal_photo => "", :meal_description => "", :may_contain_allergies => "f")
+m5 = Meal.create(:meal_name => "Apple Pie for 2", :meal_price => "3", :meal_photo => "", :meal_description => "", :may_contain_allergies => "f")
+m6 = Meal.create(:meal_name => "Brocoli Slaw ", :meal_price => "2", :meal_photo => "", :meal_description => "", :may_contain_allergies => "f")
+m7 = Meal.create(:meal_name => "Pull Pork Sandwich", :meal_price => "4", :meal_photo => "", :meal_description => "", :may_contain_allergies => "f")
 m8 = Meal.create(:meal_name => "Beef Taquitos", :meal_price => "4.00", :meal_photo => "", :meal_description => "", :may_contain_allergies => "f")
-m9 = Meal.create(:meal_name => "General Tso Chicken", :meal_price => "6.00", :meal_photo => "", :meal_description => "", :may_contain_allergies => "f")
-m10 = Meal.create(:meal_name => "Vegetable Medley", :meal_price => "2.00", :meal_photo => "", :meal_description => "", :may_contain_allergies => "f")
-m11 = Meal.create(:meal_name => "Porterhouse Steak", :meal_price => "6.00", :meal_photo => "", :meal_description => "", :may_contain_allergies => "f")
-m12 = Meal.create(:meal_name => "Club Sandwich", :meal_price => "4.00", :meal_photo => "", :meal_description => "", :may_contain_allergies => "f")
-m13 = Meal.create(:meal_name => "Pasta Fagioule", :meal_price => "4.00", :meal_photo => "", :meal_description => "", :may_contain_allergies => "f")
-m14 = Meal.create(:meal_name => "Steamed Veggie Dumplings", :meal_price => "3.00", :meal_photo => "", :meal_description => "", :may_contain_allergies => "f")
-m15 = Meal.create(:meal_name => "Hot & Sour Soup", :meal_price => "3.00", :meal_photo => "", :meal_description => "", :may_contain_allergies => "f")
-m16 = Meal.create(:meal_name => "Grilled Cheese Sandwich", :meal_price => "4.00", :meal_photo => "", :meal_description => "", :may_contain_allergies => "f")
-m17 = Meal.create(:meal_name => "BLT Sandwich", :meal_price => "5.00", :meal_photo => "", :meal_description => "", :may_contain_allergies => "f")
-m18 = Meal.create(:meal_name => "Steamed Chicken", :meal_price => "4.00", :meal_photo => "", :meal_description => "", :may_contain_allergies => "f")
-m19 = Meal.create(:meal_name => "Shrimp Cocktail", :meal_price => "5.00", :meal_photo => "", :meal_description => "", :may_contain_allergies => "f")
-m20 = Meal.create(:meal_name => "Carrot Cake", :meal_price => "3.00", :meal_photo => "", :meal_description => "", :may_contain_allergies => "f")
-m21 = Meal.create(:meal_name => "Cranberry Scones", :meal_price => "2.00", :meal_photo => "", :meal_description => "", :may_contain_allergies => "f")
-m22 = Meal.create(:meal_name => "Chocolate Lava Cake", :meal_price => "3.00", :meal_photo => "", :meal_description => "", :may_contain_allergies => "f")
-m23 = Meal.create(:meal_name => "Baby Back Ribs", :meal_price => "5.00", :meal_photo => "", :meal_description => "", :may_contain_allergies => "f")
-m24 = Meal.create(:meal_name => "Jalapeno Poppers", :meal_price => "3.00", :meal_photo => "", :meal_description => "", :may_contain_allergies => "f")
-m25 = Meal.create(:meal_name => "Hummus Plate", :meal_price => "3.00", :meal_photo => "", :meal_description => "", :may_contain_allergies => "f")
-m26 = Meal.create(:meal_name => "Exquisite Cheese Platter", :meal_price => "9.00", :meal_photo => "", :meal_description => "", :may_contain_allergies => "f")
-m27 = Meal.create(:meal_name => "Salmon Steak", :meal_price => "5.00", :meal_photo => "", :meal_description => "", :may_contain_allergies => "f")
-m28 = Meal.create(:meal_name => "Homemade Granola", :meal_price => "2.00", :meal_photo => "", :meal_description => "", :may_contain_allergies => "f")
-m29 = Meal.create(:meal_name => "Gingerbread Cookies", :meal_price => "2.00", :meal_photo => "", :meal_description => "", :may_contain_allergies => "f")
-m30 = Meal.create(:meal_name => "Christmas Fruit Cake", :meal_price => "3.00", :meal_photo => "", :meal_description => "", :may_contain_allergies => "f")
-m31 = Meal.create(:meal_name => "Almond Scones", :meal_price => "3.00", :meal_photo => "", :meal_description => "", :may_contain_allergies => "f")
-m32 = Meal.create(:meal_name => "Roasted Turkey", :meal_price => "5.00", :meal_photo => "", :meal_description => "", :may_contain_allergies => "f")
-m33 = Meal.create(:meal_name => "Shrimp Tempura Udon", :meal_price => "5.00", :meal_photo => "", :meal_description => "", :may_contain_allergies => "f")
-m34 = Meal.create(:meal_name => "Tepanyaki", :meal_price => "6.00", :meal_photo => "", :meal_description => "", :may_contain_allergies => "t")
-m35 = Meal.create(:meal_name => "Italian Hoagie with the Works", :meal_price => "5.00", :meal_photo => "", :meal_description => "", :may_contain_allergies => "t")
+m9 = Meal.create(:meal_name => "General Tso Chicken", :meal_price => "6", :meal_photo => "", :meal_description => "", :may_contain_allergies => "f")
+m10 = Meal.create(:meal_name => "Vegetable Medley", :meal_price => "2", :meal_photo => "", :meal_description => "", :may_contain_allergies => "f")
+m11 = Meal.create(:meal_name => "Porterhouse Steak", :meal_price => "6", :meal_photo => "", :meal_description => "", :may_contain_allergies => "f")
+m12 = Meal.create(:meal_name => "Club Sandwich", :meal_price => "4", :meal_photo => "", :meal_description => "", :may_contain_allergies => "f")
+m13 = Meal.create(:meal_name => "Pasta Fagioule", :meal_price => "4", :meal_photo => "", :meal_description => "", :may_contain_allergies => "f")
+m14 = Meal.create(:meal_name => "Steamed Veggie Dumplings", :meal_price => "3", :meal_photo => "", :meal_description => "", :may_contain_allergies => "f")
+m15 = Meal.create(:meal_name => "Hot & Sour Soup", :meal_price => "3", :meal_photo => "", :meal_description => "", :may_contain_allergies => "f")
+m16 = Meal.create(:meal_name => "Grilled Cheese Sandwich", :meal_price => "4", :meal_photo => "", :meal_description => "", :may_contain_allergies => "f")
+m17 = Meal.create(:meal_name => "BLT Sandwich", :meal_price => "5", :meal_photo => "", :meal_description => "", :may_contain_allergies => "f")
+m18 = Meal.create(:meal_name => "Steamed Chicken", :meal_price => "4", :meal_photo => "", :meal_description => "", :may_contain_allergies => "f")
+m19 = Meal.create(:meal_name => "Shrimp Cocktail", :meal_price => "5", :meal_photo => "", :meal_description => "", :may_contain_allergies => "f")
+m20 = Meal.create(:meal_name => "Carrot Cake", :meal_price => "3", :meal_photo => "", :meal_description => "", :may_contain_allergies => "f")
+m21 = Meal.create(:meal_name => "Cranberry Scones", :meal_price => "2", :meal_photo => "", :meal_description => "", :may_contain_allergies => "f")
+m22 = Meal.create(:meal_name => "Chocolate Lava Cake", :meal_price => "3", :meal_photo => "", :meal_description => "", :may_contain_allergies => "f")
+m23 = Meal.create(:meal_name => "Baby Back Ribs", :meal_price => "5", :meal_photo => "", :meal_description => "", :may_contain_allergies => "f")
+m24 = Meal.create(:meal_name => "Jalapeno Poppers", :meal_price => "3", :meal_photo => "", :meal_description => "", :may_contain_allergies => "f")
+m25 = Meal.create(:meal_name => "Hummus Plate", :meal_price => "3", :meal_photo => "", :meal_description => "", :may_contain_allergies => "f")
+m26 = Meal.create(:meal_name => "Exquisite Cheese Platter", :meal_price => "9", :meal_photo => "", :meal_description => "", :may_contain_allergies => "f")
+m27 = Meal.create(:meal_name => "Salmon Steak", :meal_price => "5", :meal_photo => "", :meal_description => "", :may_contain_allergies => "f")
+m28 = Meal.create(:meal_name => "Homemade Granola", :meal_price => "2", :meal_photo => "", :meal_description => "", :may_contain_allergies => "f")
+m29 = Meal.create(:meal_name => "Gingerbread Cookies", :meal_price => "2", :meal_photo => "", :meal_description => "", :may_contain_allergies => "f")
+m30 = Meal.create(:meal_name => "Christmas Fruit Cake", :meal_price => "3", :meal_photo => "", :meal_description => "", :may_contain_allergies => "f")
+m31 = Meal.create(:meal_name => "Almond Scones", :meal_price => "3", :meal_photo => "", :meal_description => "", :may_contain_allergies => "f")
+m32 = Meal.create(:meal_name => "Roasted Turkey", :meal_price => "5", :meal_photo => "", :meal_description => "", :may_contain_allergies => "f")
+m33 = Meal.create(:meal_name => "Shrimp Tempura Udon", :meal_price => "5", :meal_photo => "", :meal_description => "", :may_contain_allergies => "f")
+m34 = Meal.create(:meal_name => "Tepanyaki", :meal_price => "6", :meal_photo => "", :meal_description => "", :may_contain_allergies => "t")
+m35 = Meal.create(:meal_name => "Italian Hoagie with the Works", :meal_price => "5", :meal_photo => "", :meal_description => "", :may_contain_allergies => "t")
 
 
 # cuisines
@@ -85,7 +85,7 @@ m1.cuisines = [c5, c8, c9]
 m2.cuisines = [c1, c7]
 m3.cuisines = [c1, c7]
 m4.cuisines = [c1, c7]
-m5.cuisines = [c1, c6, c10]
+m5.cuisines = [c1, c6, c7, c10]
 m6.cuisines = [c1, c5, c8]
 m7.cuisines = [c1, c4, c6, c7]
 m8.cuisines = [c3, c6, c7]
@@ -96,22 +96,22 @@ m12.cuisines = [c1, c8]
 m13.cuisines = [c1, c7, c9]
 m14.cuisines = [c2, c5, c7]
 m15.cuisines = [c2, c7, c9]
-m16.cuisines = [c1, c5, c6]
+m16.cuisines = [c1, c5, c6, c7]
 m17.cuisines = [c1, c6, c8]
 m18.cuisines = [c2, c7]
 m19.cuisines = [c1, c8]
 m20.cuisines = [c6, c10]
-m21.cuisines = [c6, c10]
-m22.cuisines = [c6, c10]
+m21.cuisines = [c6, c8, c10]
+m22.cuisines = [c6, c8, c10]
 m23.cuisines = [c1, c4, c7]
 m24.cuisines = [c1, c6, c7]
 m25.cuisines = [c1, c5, c6, c8]
 m26.cuisines = [c1, c5, c6, c8]
 m27.cuisines = [c1, c5, c7]
-m28.cuisines = [c1, c6, c10]
-m29.cuisines = [c1, c6, c10]
-m30.cuisines = [c1, c6, c10]
-m31.cuisines = [c1, c6, c10]
+m28.cuisines = [c1, c6, c8, c10]
+m29.cuisines = [c1, c6, c8, c10]
+m30.cuisines = [c1, c6, c8, c10]
+m31.cuisines = [c1, c6, c8, c10]
 m32.cuisines = [c1, c7]
 m33.cuisines = [c2, c5, c7, c9]
 m34.cuisines = [c2, c7]

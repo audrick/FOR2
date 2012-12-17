@@ -4,13 +4,20 @@ FOR2::Application.routes.draw do
   resources :cuisines
   resources :meals
 
-  root :to => 'home#index'
+  # root :to => 'home#index'
+  root :to => 'session#new'
 
-  match '/list_meal' => 'meals#list', :via => :get
 
   match '/login' => 'session#new', :via => :get
   match '/logout' => 'session#destroy', :via => :get
   match '/session' => 'session#create', :via => :post
+
+  match '/users/:id/list' => 'users#list', :via => :get, :as => :user_list
+
+
+  # match '/auth/:provider/callback' => 'sessions#create'
+  # match '/auth/failure' => redirect('/')
+  # match '/signout' => 'sessions#destroy'
 
 
 

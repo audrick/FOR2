@@ -10,7 +10,7 @@
 
 <%= link_to "Edit Your Profile", edit_user_path %><br/><br/>
 <%= link_to "Choose Your Meal Preferences", edit_user_path %><br/><br/>
-<%= link_to "List Meals Based on Your Preference", list_meal_path %><br/><br/>
+<%= link_to "Show me Meals", user_list_path %><br/><br/>
 <%= link_to "Back to Index", users_path %><br/><br/>
 
 <%if @user.is_seller %>
@@ -19,14 +19,15 @@
 
 
 <!-- <%#= meal_show_tag(@user) %>         #helper not working properly -->
-<br/>
+
 <br/>
 <br/>
 <% if @user.is_seller && @user.meals %>
   <h3>Your Posted Meals:</h3>
   <% @user.meals.each do |meal| %>
   <%= meal.meal_name %>
-  <%= link_to "Edit Dish", edit_meal_path(meal) %><br/>
+  <%= link_to "Edit Dish", edit_meal_path(meal) %>
+  <%= link_to 'Destroy', meal, method: :delete, data: {confirm: 'Are you sure?'}%><br/>
 <% end %>
 
 <%if @user.is_seller %>

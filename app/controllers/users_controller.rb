@@ -45,6 +45,11 @@ class UsersController < ApplicationController
     end
   end
 
+  def list
+    @user = User.find(params[:id])
+    @list = @user.cuisines.map(&:meals).flatten.uniq
+  end
+
   def destroy
     user = User.find(params[:id])
     user.delete
