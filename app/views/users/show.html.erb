@@ -8,24 +8,32 @@
 <h1>Your username is: <%= @user.username %></h1>
 
 
-<%= link_to "Edit", edit_user_path %><br/><br/>
-<%= link_to "Create New User", new_user_path %><br/>
-<br/>
+<%= link_to "Edit Your Profile", edit_user_path %><br/><br/>
+<%= link_to "Choose Your Meal Preferences", edit_user_path %><br/><br/>
+<%= link_to "List Meals Based on Your Preference", list_meal_path %><br/><br/>
 <%= link_to "Back to Index", users_path %><br/><br/>
 
-
 <%if @user.is_seller %>
-    <%= link_to "Post a Meal", new_meal_path %>
+    <%= link_to "Post a Dish", new_meal_path %>
 <% end %>
 
 
 <!-- <%#= meal_show_tag(@user) %>         #helper not working properly -->
-
+<br/>
+<br/>
+<br/>
 <% if @user.is_seller && @user.meals %>
   <h3>Your Posted Meals:</h3>
   <% @user.meals.each do |meal| %>
-  <%= meal.meal_name %><br/>
+  <%= meal.meal_name %>
+  <%= link_to "Edit Dish", edit_meal_path(meal) %><br/>
 <% end %>
+
+<%if @user.is_seller %>
+    <%= link_to "Add Dish", new_meal_path %>
+<% end %>
+
+
 
 <p>Find me in app/views/users/show.html.erb</p>
 

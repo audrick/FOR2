@@ -1,6 +1,6 @@
 <%= link_to "logout", '/logout' %>
 
-<h1>Edit Profile</h1>
+<h1>Edit Profile</h1><%= link_to "Cancel Edit", user_path %><br/><br/>
 
 <%= render 'formedit' %>
 
@@ -11,6 +11,9 @@
 
 <h3>Do you want to be a seller?</h3><button id="show">Yes</button>
 <div id="seller_profile"><%= render 'sellerprofile' %></div>
+
+<br/>
+<br/>
 
 
 <p>Find me in app/views/users/edit.html.erb</p>

@@ -30,8 +30,8 @@
   <div class="field">
     <%= f.label "Check all cuisine types that apply to this meal:" %>
       <% Cuisine.order('cuisine_name').each do |cuisine| %>
-      <%= cuisine.cuisine_name %>
       <%= check_box_tag 'meal[cuisine_ids][]', cuisine.id %>
+      <%= cuisine.cuisine_name %>
     <% end %>
   </div>
   <div class="actions">

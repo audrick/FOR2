@@ -24,6 +24,11 @@ class MealsController < ApplicationController
   def show
     @meal = Meal.find(params[:id])
   end
+
+  def list
+    @user.cuisines.map(&:meals).flatten.uniq
+    end
+  end
 end
 
 

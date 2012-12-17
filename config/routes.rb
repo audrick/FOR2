@@ -6,6 +6,8 @@ FOR2::Application.routes.draw do
 
   root :to => 'home#index'
 
+  match '/list_meal' => 'meals#list', :via => :get
+
   match '/login' => 'session#new', :via => :get
   match '/logout' => 'session#destroy', :via => :get
   match '/session' => 'session#create', :via => :post

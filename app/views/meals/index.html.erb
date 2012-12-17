@@ -1,6 +1,17 @@
-<h1>Meals#index</h1>
-
-
-<h3>This is an index of all meals posted</h3>
-
 <p>Find me in app/views/meals/index.html.erb</p>
+
+<h1>The current list of meals are:</h1>
+
+
+
+<h1><% @meals.each do |meal| %></h1>
+
+<p><%= meal.meal_name %></p>
+<td><%= link_to 'Show', meal %></td>
+<td><%= link_to 'Edit', edit_meal_path(meal) %></td>
+<td><%= link_to 'Destroy', meal, method: :delete, data: {confirm: 'Are you sure?'}%></td>
+<% end %>
+
+<br/>
+<br/>
+<%= link_to 'Add Dish', new_meal_path %>
