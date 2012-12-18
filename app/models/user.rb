@@ -27,4 +27,19 @@ class User < ActiveRecord::Base
   has_secure_password
   has_and_belongs_to_many :cuisines
   has_and_belongs_to_many :meals
+
+  def self.from_omniauth(auth)
+  where(auth.slice("provider", "uid")).first || create_from_omniauth(auth)
+  end
+
+  def self.create_from_omniauth(auth)
+    user = User.new
+    user.name = auth[:info][:name]
+    user.uid = auth[:uid]
+    user.provider = auth[:provider]
+    user.save
+    user
+  # create a new user, save provider, uid and name/nickname
+  end
+
 end

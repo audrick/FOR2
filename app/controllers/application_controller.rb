@@ -1,15 +1,15 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
-  before_filter :authenticate_user
+  before_filter :authenticate
 
   private
 
-  def authenticate_user
-    if session[:user_id]
-        @auth = User.find(session[:user_id])
-    else
-        @auth = nil
-    end
-    rescue ActiveRecord::RecordNotFound
+  def authenticate
+    # if session[:user_id]
+        @auth = User.find(session[:user_id]) if session[:user_id]
+    # else
+    #     @auth = nil
   end
+  #   rescue ActiveRecord::RecordNotFound
+  # end
 end
