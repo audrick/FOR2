@@ -15,9 +15,9 @@ FOR2::Application.routes.draw do
   match '/users/:id/list' => 'users#list', :via => :get, :as => :user_list
 
 
-  match '/auth/:provider/callback' => 'sessions#create'
+  match '/auth/:provider/callback' => 'session#create'
   match '/auth/failure' => redirect('/')
-  match '/signout' => 'sessions#destroy'
+  match '/signout' => 'session#destroy'
 
 
 

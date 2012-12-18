@@ -5,6 +5,9 @@
 #  id                         :integer          not null, primary key
 #  first_name                 :string(255)
 #  last_name                  :string(255)
+#  uid                        :string(255)
+#  provider                   :string(255)
+#  name                       :string(255)
 #  username                   :string(255)
 #  email_address              :string(255)
 #  password_digest            :string(255)
@@ -20,6 +23,9 @@
 #  seller_pickup_preference   :boolean
 #  created_at                 :datetime         not null
 #  updated_at                 :datetime         not null
+#  is_seller                  :boolean
+#  lat                        :float
+#  lng                        :float
 #
 
 require 'test_helper'

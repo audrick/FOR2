@@ -26,7 +26,6 @@ u18 = User.create(:first_name => "Kevin", :last_name => "Jonas", :username => "k
 u19 = User.create(:first_name => "Henry", :last_name => "Simons", :username => "hsimons", :email_address => "kimshees@gmail.com", :password => "123", :password_confirmation => "123", :zip_code => "10007", :phone_number => "9176789036", :gender => "male", :birthday => "", :buyer_fresh_preference => "same day", :buyer_distance_preference => "2", :has_allergies => "f", :seller_distance_preference => "", :seller_delivery_preference => "", :seller_pickup_preference => "", :is_seller => "f")
 u20 = User.create(:first_name => "Emeril", :last_name => "Lagasse", :username => "elagasse", :email_address => "kimshees@gmail.com", :password => "123", :password_confirmation => "123", :zip_code => "10004", :phone_number => "9176789036", :gender => "male", :birthday => "", :buyer_fresh_preference => "same day", :buyer_distance_preference => "5", :has_allergies => "t", :seller_distance_preference => "", :seller_delivery_preference => "", :seller_pickup_preference => "", :is_seller => "t")
 
-
 # meals
 
 m1 = Meal.create(:meal_name => "Gazpacho", :meal_price => "2", :meal_photo => "", :meal_description => "", :may_contain_allergies => "f")
@@ -140,4 +139,16 @@ u1.meals = [m1, m2, m3, m4, m5, m6, m7, m8, m9, m10, m11, m12]
 u2.meals = [m13, m14, m15, m16, m17, m18, m19, m20, m21, m22, m23, m24]
 u3.meals = [m25, m26, m27, m28, m29]
 u20.meals = [m30, m31, m32, m33, m34, m35]
+
+users = User.all
+
+users.each do |user|
+  g = Geocoder.search(user.zip_code)  # geocode the user's zipcode
+  lat = g[0].data['geometry']['location']['lat'] # extract the geocoded lat/long
+  lng = g[0].data['geometry']['location']['lng'] # save the lat/long to the user's lat/long
+  user.lat = lat # user.lat = something
+  user.lng = lng # user.lng = something
+  user.save
+  sleep 1.5  # wait 1.5 sec between queries for seed file (lat, lng)
+end
 

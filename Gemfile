@@ -5,7 +5,6 @@ gem 'rails', '3.2.9'
 # gem 'active_admin'
 # gem 'aws-ses'
 # gem 'carrierwave'
-gem 'compass-rails'
 gem 'devise'
 # gem 'facebook_oauth'
 # gem 'fog'
@@ -45,4 +44,5 @@ group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
   gem 'uglifier', '>= 1.0.3'
+  gem 'compass-rails'
 end

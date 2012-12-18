@@ -47,6 +47,9 @@ ActiveRecord::Schema.define(:version => 20121217225133) do
   create_table "users", :force => true do |t|
     t.string   "first_name"
     t.string   "last_name"
+    t.string   "uid"
+    t.string   "provider"
+    t.string   "name"
     t.string   "username"
     t.string   "email_address"
     t.string   "password_digest"
