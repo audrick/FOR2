@@ -13,7 +13,12 @@
     <th></th>
   </tr>
 
-<% @list.each do |meal| %>
+
+<%= render :partial => 'map', :locals => {:lat => @user.lat, :lng => @user.lng, :zoom => 13} %>
+<%= render :partial => 'pin', :collection => @sellers, :as => :seller %>
+
+
+<% @meals.each do |meal| %>
   <tr>
     <td><%= link_to meal.meal_name, meal_path(meal) %></td>
     <td><%= meal.users.first.zip_code %></td>

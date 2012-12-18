@@ -65,7 +65,8 @@ class UsersController < ApplicationController
 
   def list
     @user = User.find(params[:id])
-    @list = @user.cuisines.map(&:meals).flatten.uniq
+    @meals = @user.cuisines.map(&:meals).flatten.uniq
+    @sellers = @meals.map(&:users).flatten.uniq
   end
 
   def destroy

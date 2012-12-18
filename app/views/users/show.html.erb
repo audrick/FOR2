@@ -22,7 +22,7 @@
 
 <br/>
 <br/>
-<% if @user.is_seller && @user.meals %>
+<% if @auth.is_seller && @auth.meals %>
   <h3>Your Posted Meals:</h3>
   <% @user.meals.each do |meal| %>
   <%= meal.meal_name %>
@@ -30,7 +30,7 @@
   <%= link_to 'Destroy', meal, method: :delete, data: {confirm: 'Are you sure?'}%><br/>
 <% end %>
 
-<%if @user.is_seller %>
+<%if @auth.is_seller %>
     <%= link_to "Add Dish", new_meal_path %>
 <% end %>
 

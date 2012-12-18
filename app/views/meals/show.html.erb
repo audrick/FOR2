@@ -9,7 +9,7 @@
 
 
 
-<% if @user.is_seller && @user.meals %>
+<% if @auth.is_seller && @auth.meals %>
   <%= @meal.meal_name %>
   <%= link_to 'Edit Meal', edit_meal_path %>
 

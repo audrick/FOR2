@@ -30,7 +30,7 @@ class MealsController < ApplicationController
 
   def destroy
     meal = Meal.find(params[:id])
-    meal.delete
-    redirect_to meal
+    meal.destroy
+    redirect_to @auth
   end
 end
