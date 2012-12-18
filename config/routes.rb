@@ -5,7 +5,7 @@ FOR2::Application.routes.draw do
   resources :meals
 
   # root :to => 'home#index'
-  root :to => 'session#new'
+  root :to => 'home#index'
 
 
   match '/login' => 'session#new', :via => :get
