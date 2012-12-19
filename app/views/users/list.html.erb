@@ -27,9 +27,11 @@
     <td><%= link_to meal.meal_name, meal_path(meal) %></td>
     <td><%= meal.users.first.zip_code %></td>
     <td><%= meal.users.first.username %></td>
-    <td><p>$<%= meal.meal_price.to_f %></p></td>
+    <td><p><%= number_to_currency(meal.meal_price) %></p></td>
     <td><%= meal.meal_description %></td>
-    <td><%= meal.cuisines %></td>
+    <td><%= meal.cuisines.map { |cuisine| cuisine.cuisine_name }.join(", ") %></td>
+
+
   </tr>
   <% end %>
 
