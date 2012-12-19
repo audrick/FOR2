@@ -12,5 +12,10 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.js
+//= require 'foundation.min.js'
+//= require 'app.js'
 //= require 'user.js'
+//= require 'styles.js'
 //= require 'google.js'
+

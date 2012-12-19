@@ -11,13 +11,16 @@
  *= require_self
  *= require_tree .
  *= require 'foundation.css'
+ *= require 'main.css'
 
  */
 
 #map_canvas
 {
-  width: 1200px;
-  height: 450px;
+  width: 1550px;
+  height: 600px;
 }
 
-
+div {
+  display: block;
+}

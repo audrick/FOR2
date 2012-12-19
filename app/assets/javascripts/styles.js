@@ -8,7 +8,7 @@ var styles = [
       featureType: "road",
       elementType: "geometry",
       stylers: [
-        { lightness: 200 },
+        { lightness: 100 },
         { visibility: "simplified" }
       ]
     },{
@@ -19,5 +19,3 @@ var styles = [
       ]
     }
   ];
-
-

@@ -3,25 +3,31 @@ var canvas;
 
 $(function(){
 
-  // #default loading map
-  //display_map(40.7316, -73.9901, 13);
-
 });
 
 function display_map(lat, long, zoom)
 {
+
+  var styledMap = new google.maps.StyledMapType(styles,
+    {name: "Styled Map"});
+
   var mapOptions = {
     center: new google.maps.LatLng(lat, long),
     zoom: zoom,
-    mapTypeId: google.maps.MapTypeId.ROADMAP
+    mapTypeControlOptions: {
+      mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'map_style']
+    }
   };
 
   canvas = $('#map_canvas')[0];
   map = new google.maps.Map(canvas, mapOptions);
+
+  map.mapTypes.set('map_style', styledMap);
+  map.setMapTypeId('map_style');
 }
 
 function add_marker(lat, long, title)
 {
   var latlng = new google.maps.LatLng(lat, long);
-  var marker = new google.maps.Marker({position: latlng, map: map, title: title});
+  var marker = new google.maps.Marker({position: latlng, map: map, title:title});
 }

@@ -1,0 +1,30 @@
+@import url(http://fonts.googleapis.com/css?family=Average+Sans)
+
+
+/*---------- Global Setup --------------------*/
+
+/* Box Model Hack */
+* {
+     -moz-box-sizing: border-box; /* Firefox */
+     -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
+     box-sizing: border-box; /* IE */
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+/*--------------General Styling------------------*/
+
+#wrapper {
+  width: 100%;
+  float: left;
+  background: url(/static/main_bg.jpg) no-repeat center top;
+}
+

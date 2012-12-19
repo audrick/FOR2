@@ -1,15 +1,19 @@
+<%= link_to "logout", '/logout' %>
+
 <h1>Users#list</h1>
 
 <%= link_to "Edit Your Meal Preferences", edit_user_path %><br/>
 
-<h1>List of meals based on preference</h1>
+<h1>Meals based on your preferences</h1>
 <br/>
 <table>
   <tr>
-    <th>Meal</th>
+    <th>Meal Name</th>
     <th>Zip Code</th>
     <th>Seller</th>
     <th>Price</th>
+    <th>Description</th>
+    <th>Cuisine Types</th>
     <th></th>
   </tr>
 
@@ -23,10 +27,12 @@
     <td><%= link_to meal.meal_name, meal_path(meal) %></td>
     <td><%= meal.users.first.zip_code %></td>
     <td><%= meal.users.first.username %></td>
-    <td><p>$<%= meal.meal_price %></p></td>
+    <td><p>$<%= meal.meal_price.to_f %></p></td>
   </tr>
-<% end %>
-</table>
+  <% end %>
+
+</table><br/>
+<%= paginate @meals %>
 
 <br/>
 <br/>
@@ -34,8 +40,6 @@
 
 
 
-
-<p>Find me in app/views/users/list.html.erb</p>
 
 
 
