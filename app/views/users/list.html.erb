@@ -14,7 +14,7 @@
     <th>Price</th>
     <th>Description</th>
     <th>Cuisine Types</th>
-    <th></th>
+    <th>Approximate Distance</th>
   </tr>
 
 
@@ -28,6 +28,8 @@
     <td><%= meal.users.first.zip_code %></td>
     <td><%= meal.users.first.username %></td>
     <td><p>$<%= meal.meal_price.to_f %></p></td>
+    <td><%= meal.meal_description %></td>
+    <td><%= meal.cuisines %></td>
   </tr>
   <% end %>
 
@@ -37,9 +39,5 @@
 <br/>
 <br/>
 <%= link_to "Edit Your Meal Preferences", edit_user_path %><br/><br/>
-
-
-
-
 
 

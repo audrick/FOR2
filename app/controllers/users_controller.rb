@@ -67,6 +67,7 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @meals = @user.cuisines.map(&:meals).flatten.uniq
     @sellers = @meals.map(&:users).flatten.uniq
+    @meal_description = @meals.map(&:meal_description).flatten.uniq
     @meals = Meal.page(params[:page])
   end
 
