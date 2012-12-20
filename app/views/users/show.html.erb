@@ -11,7 +11,7 @@
 <%= link_to "Edit Your Profile", edit_user_path %><br/><br/>
 <%= link_to "Choose Your Meal Preferences", edit_user_path %><br/><br/>
 <%= link_to "Show me Meals", user_list_path %><br/><br/>
-<%= link_to "Back to Index", users_path %><br/><br/>
+
 
 <%if @user.is_seller %>
     <%= link_to "Post a Dish", new_meal_path %>

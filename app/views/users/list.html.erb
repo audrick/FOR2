@@ -4,7 +4,8 @@
 
 <%= link_to "Edit Your Meal Preferences", edit_user_path %><br/>
 
-<h1>Meals based on your preferences</h1>
+<h1>Meals based on your preferences</h1><br/>
+<h2>Your current zip code is: <%= @auth.zip_code %></h2>
 <br/>
 <table>
   <tr>
@@ -15,10 +16,10 @@
     <th>Description</th>
     <th>Cuisine Types</th>
     <th>Approximate Distance</th>
+
   </tr>
 
-
-<%= render :partial => 'map', :locals => {:lat => @user.lat, :lng => @user.lng, :zoom => 13} %>
+<%= render :partial => 'map', :locals => {:lat => @user.lat, :lng => @user.lng, :zoom => 12} %>
 <%= render :partial => 'pin', :collection => @sellers, :as => :seller %>
 
 
@@ -30,7 +31,7 @@
     <td><p><%= number_to_currency(meal.meal_price) %></p></td>
     <td><%= meal.meal_description %></td>
     <td><%= meal.cuisines.map { |cuisine| cuisine.cuisine_name }.join(", ") %></td>
-
+    <td><%= %></td>
 
   </tr>
   <% end %>

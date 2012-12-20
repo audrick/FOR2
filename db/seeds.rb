@@ -152,3 +152,10 @@ users.each do |user|
   sleep 1.5  # wait 1.5 sec between queries for seed file (lat, lng)
 end
 
+# meals = Meal.all
+
+# meals.each do |meal|
+#   meal.lat = @meal.users[0].lat
+#   meal.lng = @meal.users[0].lng
+#   meal.save
+# end

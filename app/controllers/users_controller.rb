@@ -46,6 +46,7 @@ class UsersController < ApplicationController
 
 
   def update
+
     @user = User.find(params[:id])
     if @user.zip_code != nil
     # take the user's zipcode
@@ -54,7 +55,13 @@ class UsersController < ApplicationController
       @lng = @g[0].data['geometry']['location']['lng'] # save the lat/long to the user's lat/long
       @user.lat = @lat # user.lat = something
       @user.lng = @lng # user.lng = something
+
+      @meal = Meal.find(params[:id])
+      @meal.lat = @meal.users[0].lat
+      @meal.lng = @meal.users[0].lng
+      @meal.save
     end
+
     if @user.update_attributes(params[:user])
       session[:user_id] = @user.id
       redirect_to @user
@@ -65,10 +72,10 @@ class UsersController < ApplicationController
 
   def list
     @user = User.find(params[:id])
-    @meals = @user.cuisines.map(&:meals).flatten.uniq
-    @sellers = @meals.map(&:users).flatten.uniq
-    @meal_description = @meals.map(&:meal_description).flatten.uniq
-    @meals = Meal.page(params[:page])
+    @meals = @user.cuisines.map(&:meals).flatten.uniq                   #meal
+    @sellers = @meals.map(&:users).flatten.uniq                         #seller
+    @meal_description = @meals.map(&:meal_description).flatten.uniq     #meal_description
+    @meals = Meal.page(params[:page])                                   #kaminari paging requirement
   end
 
   def destroy
