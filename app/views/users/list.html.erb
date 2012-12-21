@@ -7,7 +7,7 @@
 <h1>Meals based on your preferences</h1><br/>
 <h2>Your current zip code is: <%= @auth.zip_code %></h2>
 <br/>
-<table>
+<table class="Meals">
   <tr>
     <th>Meal Name</th>
     <th>Zip Code</th>
@@ -16,12 +16,10 @@
     <th>Description</th>
     <th>Cuisine Types</th>
     <th>Approximate Distance</th>
-
   </tr>
 
 <%= render :partial => 'map', :locals => {:lat => @user.lat, :lng => @user.lng, :zoom => 14} %>
 <%= render :partial => 'pin', :collection => @meals, :as => :meal %>
-
 
 <% @meals.each do |meal| %>
   <tr>
@@ -34,8 +32,8 @@
     <td><%= %></td>
   </tr>
   <% end %>
-
 </table><br/>
+
 <%#= paginate @meallist %>
 
 <br/>

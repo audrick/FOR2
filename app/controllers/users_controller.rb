@@ -67,9 +67,10 @@ class UsersController < ApplicationController
 
   def list
     @user = User.find(params[:id])
-    @meals = @user.cuisines.map(&:meals).flatten.uniq                   #meals
-    @sellers = @meals.map(&:users).flatten.uniq                         #seller
-    @meal_description = @meals.map(&:meal_description).flatten.uniq     #meal_description
+    # @meals = Meal.order(params[:sort] + '' + params[:direction])        #sort table via arrows
+    @meals = @user.cuisines.map(&:meals).flatten.uniq                   #prints meal name on list
+    @sellers = @meals.map(&:users).flatten.uniq                         #prints seller name on list
+    @meal_description = @meals.map(&:meal_description).flatten.uniq     #printsmeal_description
     # @meallist = Kaminari.paginate_array(@meals).page(params[:page]).per(10)
   end
 
