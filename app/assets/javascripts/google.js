@@ -3,6 +3,7 @@ var canvas;
 
 $(function(){
 
+
 });
 
 function display_map(lat, long, zoom)
