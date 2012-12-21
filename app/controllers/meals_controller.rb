@@ -9,6 +9,8 @@ class MealsController < ApplicationController
 
   def create
     @meal = Meal.new(params[:meal])
+    @meal.lat = @auth.lat
+    @meal.lng = @auth.lng
     @auth.meals << @meal
     if @meal.save
         redirect_to @meal
@@ -17,9 +19,21 @@ class MealsController < ApplicationController
     end
   end
 
+
   def edit
     @meal = Meal.find(params[:id])
   end
+
+  def update
+    @meal = Meal.find(params[:id])
+    if @meal.update_attributes(params[:meal])
+       session[:meal_id] = @meal.id
+       redirect_to @meal
+     else
+      render :edit
+     end
+  end
+
 
   def show
     @meal = Meal.find(params[:id])

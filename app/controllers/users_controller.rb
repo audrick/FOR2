@@ -56,10 +56,6 @@ class UsersController < ApplicationController
       @user.lat = @lat # user.lat = something
       @user.lng = @lng # user.lng = something
 
-      @meal = Meal.find(params[:id])
-      @meal.lat = @meal.users[0].lat
-      @meal.lng = @meal.users[0].lng
-      @meal.save
     end
 
     if @user.update_attributes(params[:user])
