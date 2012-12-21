@@ -55,7 +55,6 @@ class UsersController < ApplicationController
       @lng = @g[0].data['geometry']['location']['lng'] # save the lat/long to the user's lat/long
       @user.lat = @lat # user.lat = something
       @user.lng = @lng # user.lng = something
-
     end
 
     if @user.update_attributes(params[:user])
@@ -68,10 +67,10 @@ class UsersController < ApplicationController
 
   def list
     @user = User.find(params[:id])
-    @meals = @user.cuisines.map(&:meals).flatten.uniq                   #meal
+    @meals = @user.cuisines.map(&:meals).flatten.uniq                   #meals
     @sellers = @meals.map(&:users).flatten.uniq                         #seller
     @meal_description = @meals.map(&:meal_description).flatten.uniq     #meal_description
-    @meals = Meal.page(params[:page])                                   #kaminari paging requirement
+    # @meallist = Kaminari.paginate_array(@meals).page(params[:page]).per(10)
   end
 
   def destroy

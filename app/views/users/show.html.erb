@@ -6,14 +6,18 @@
 <% end %>
 
 <h1>Your username is: <%= @user.username %></h1>
-
+<br/>
+<br/>
 
 <%= link_to "Edit Your Profile", edit_user_path %><br/><br/>
 <%= link_to "Choose Your Meal Preferences", edit_user_path %><br/><br/>
-<%= link_to "Show me Meals", user_list_path %><br/><br/>
+
+<% if @user.cuisines != nil %>
+  <%= link_to "Show me Meals", user_list_path %><br/><br/>
+<% end %>
 
 
-<%if @user.is_seller %>
+<% if @user.is_seller %>
     <%= link_to "Post a Dish", new_meal_path %>
 <% end %>
 
@@ -30,9 +34,6 @@
   <%= link_to 'Destroy', meal, method: :delete, data: {confirm: 'Are you sure?'}%><br/>
 <% end %>
 
-<%if @auth.is_seller %>
-    <%= link_to "Add Dish", new_meal_path %>
-<% end %>
 
 
 
