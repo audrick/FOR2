@@ -68,7 +68,7 @@ m26 = Meal.create(:meal_name => "Exquisite Cheese Platter", :meal_price => "9", 
 m27 = Meal.create(:meal_name => "Salmon Steak", :meal_price => "5", :meal_photo => "", :meal_description => "get it while its hot!", :may_contain_allergies => "f")
 m28 = Meal.create(:meal_name => "Homemade Granola", :meal_price => "2", :meal_photo => "", :meal_description => "special family recipe", :may_contain_allergies => "f")
 m29 = Meal.create(:meal_name => "Gingerbread Cookies", :meal_price => "2", :meal_photo => "", :meal_description => "shaped like men", :may_contain_allergies => "f")
-m30 = Meal.create(:meal_name => "Christmas Fruit Cake", :meal_price => "3", :meal_photo => "", :meal_description => "don't throw it around like a football", :may_contain_allergies => "f")
+m30 = Meal.create(:meal_name => "Raisin Fruit Cake", :meal_price => "3", :meal_photo => "", :meal_description => "don't throw it around like a football", :may_contain_allergies => "f")
 m31 = Meal.create(:meal_name => "Almond Scones", :meal_price => "3", :meal_photo => "", :meal_description => "nice with tea", :may_contain_allergies => "f")
 m32 = Meal.create(:meal_name => "Roasted Turkey", :meal_price => "5", :meal_photo => "", :meal_description => "with peas and carrots", :may_contain_allergies => "f")
 m33 = Meal.create(:meal_name => "Shrimp Tempura Udon", :meal_price => "5", :meal_photo => "", :meal_description => "comes with chopsticks", :may_contain_allergies => "f")
